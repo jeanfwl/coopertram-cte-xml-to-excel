@@ -1,0 +1,9 @@
+DATA EMISSAO = ide > dhEmi
+VALOR RELAT. = vPrest > Comp > vComp
+PRODUTO      = infCTeNorm > infCarga > proPred
+NOTAS        = infCTeNorm > infNFe[] > chave
+ORIGEM       = ide > cMunIni
+DESTINO      = ide > xMunFim
+NUMERO       = ide > cCT
+
+FIM
