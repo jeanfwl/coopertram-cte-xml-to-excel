@@ -190,6 +190,9 @@ function createCteExcel(ctes: Cte[], merge: boolean): void {
   // Definindo as mesclagens
   if (merge) {
     worksheet.eachRow((row) => {
+      row.font = {
+        size: 10,
+      };
       Array.from({ length: 25 }).forEach((_, i) => {
         const cell = row.getCell(i + 1);
         cell.border = {
@@ -241,6 +244,10 @@ function createCteExcel(ctes: Cte[], merge: boolean): void {
     worksheet.getCell(`K1`).value = { formula: `SUM(I$${excelRow}-J$${excelRow})*0.03` };
 
     worksheet.getCell(`L1`).numFmt = currencyFormat;
+    worksheet.getCell(`L1`).font = {
+      bold: true,
+      italic: true,
+    };
     worksheet.getCell(`L1`).value = { formula: `SUM(I$${excelRow}-J$${excelRow})*0.97` };
 
     worksheet.getCell(`M1`).numFmt = currencyFormat;
@@ -248,10 +255,18 @@ function createCteExcel(ctes: Cte[], merge: boolean): void {
 
     worksheet.getCell(`N1`).numFmt = currencyFormat;
     worksheet.getCell(`N1`).value = { formula: `L$${excelRow}*0.005` };
+    worksheet.getCell(`N1`).font = {
+      bold: true,
+      italic: true,
+    };
 
     worksheet.getCell(`P1`).numFmt = currencyFormat;
     worksheet.getCell(`P1`).value = {
       formula: `SUM(L$${excelRow})-(M$${excelRow}+N$${excelRow}+O$${excelRow})`,
+    };
+    worksheet.getCell(`P1`).font = {
+      bold: true,
+      italic: true,
     };
 
     worksheet.getCell(`U1`).numFmt = currencyFormat;
@@ -267,6 +282,10 @@ function createCteExcel(ctes: Cte[], merge: boolean): void {
     worksheet.getCell(`Y1`).numFmt = currencyFormat;
     worksheet.getCell(`Y1`).value = {
       formula: `SUM(P$${excelRow}+X$${excelRow})-(U$${excelRow}+W$${excelRow})`,
+    };
+    worksheet.getCell(`Y1`).font = {
+      bold: true,
+      italic: true,
     };
   } else {
     ctes.forEach((cte, i) => {
