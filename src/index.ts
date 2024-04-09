@@ -247,6 +247,7 @@ function createCteExcel(ctes: Cte[], merge: boolean): void {
     worksheet.getCell(`L1`).font = {
       bold: true,
       italic: true,
+      size: 10,
     };
     worksheet.getCell(`L1`).value = { formula: `SUM(I$${excelRow}-J$${excelRow})*0.97` };
 
@@ -258,6 +259,7 @@ function createCteExcel(ctes: Cte[], merge: boolean): void {
     worksheet.getCell(`N1`).font = {
       bold: true,
       italic: true,
+      size: 10,
     };
 
     worksheet.getCell(`P1`).numFmt = currencyFormat;
@@ -267,6 +269,7 @@ function createCteExcel(ctes: Cte[], merge: boolean): void {
     worksheet.getCell(`P1`).font = {
       bold: true,
       italic: true,
+      size: 10,
     };
 
     worksheet.getCell(`U1`).numFmt = currencyFormat;
@@ -286,6 +289,7 @@ function createCteExcel(ctes: Cte[], merge: boolean): void {
     worksheet.getCell(`Y1`).font = {
       bold: true,
       italic: true,
+      size: 10,
     };
   } else {
     ctes.forEach((cte, i) => {
