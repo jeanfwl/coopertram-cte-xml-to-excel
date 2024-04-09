@@ -334,7 +334,7 @@ function createCteExcel(ctes: Cte[], merge: boolean): void {
       const link = document.createElement('a');
       link.href = url;
       // Define o nome do arquivo
-      link.download = 'output.xlsx';
+      link.download = 'ctes.xlsx';
       // Adiciona o link ao documento
       // Simula um clique no link para iniciar o download
       link.click();
