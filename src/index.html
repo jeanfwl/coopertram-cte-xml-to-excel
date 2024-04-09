@@ -22,14 +22,14 @@
     </style>
   </head>
   <body class="vh-100">
-    <form class="d-flex flex-row justify-content-center align-items-center h-100">
+    <form class="container d-flex flex-row justify-content-center align-items-center h-100">
       <div class="card border-0 shadow-lg px-5 py-4" style="max-width: 650px">
-        <div class="row mb-3">
-          <div class="col-3" title="Linha da planilha na qual será colado o resultado">
+        <div class="row mb-3 g-2">
+          <div class="col-12 col-md-3" title="Linha da planilha na qual será colado o resultado">
             <label for="excelLine" class="form-label">Linha do Excel</label>
             <input type="number" id="excelLine" class="form-control" placeholder="Ex: 100" required min="1" />
           </div>
-          <div class="col-9">
+          <div class="col-12 col-md-9">
             <label for="xmlInput" class="form-label"> Selecione os arquivos XML </label>
             <input class="form-control" type="file" id="xmlInput" multiple required accept=".xml" />
           </div>
